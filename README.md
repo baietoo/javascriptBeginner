@@ -36,3 +36,39 @@ the above works, if you do this on the other hand:
 if u use var the running order won't be kept, dont use var
 
 ## types and operators
+strings in javascript act different due to weak typing:
+
+'123' + 2 = '1232';
+* number.parseToFloat('A123') - throws an error
+* number.parseToFloat('123A') - returns 123
+* typeof(2) - returns number
+* typeof('a') -returns string
+* 'a'.toUpper() - returns 'A'
+* you can also increment/decrement
+    * varName++
+    * ++varName
+    * just keep in mind that a post increment will not be shown in console
+* 123.toString - '123'
+* 'tibi'.length = 4
+* 'tibi'.substrin(1) = 'ibi'
+* when using backticks in string you can include variables:
+    * ```` damn boi he: ${thicknessIndex} ````
+* also objects:
+```
+let person = {
+    firstName: 'John',
+    lastName: 'Boi'
+    }
+```
+* access an object:
+    * console.log(person.firstName);
+
+* booleans:
+    * let saved = true
+    * saved = !saved
+
+* best practice to erase a variable:
+    * varName = null;
+    * leave undefined to javascript
+    * common sense innit
+
