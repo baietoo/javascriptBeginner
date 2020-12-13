@@ -1,62 +1,93 @@
-// let price = 4.99,
-    // message = 'Damn boiii price good',
-    // name = 'them boots';
-// 
-// const priceOriginal = 40;
-// 
-// showMessage(price);
-// 
+/* 
+====PROGRAM FLOW====
 
-// let price = 20.99;
+    if else statements    
+    Truthy and falsi
+    === ==
+    ternary operator
+    block scope
+    Loops for while do while
+*/
 
-// price += 5;
+// let message = 'tibi';
+
+// if (message === 'tibi' ) {
+//     showMessage(message);
+// }
+
+// let state = 'FL';
+
+// use '===' in conditionals
+
+// if (true) {
+//     showMessage('truuu');
+// }
+
+// === - identically equal
+
+// empty strings false, 0 is false
+/* null false
+undefined false
+nan false
+
+"0" true 0 falsy
+
++(1.1).toFixed(2)
+converts string to Number */
+
+// if (condition) {
+
+// } else {
+    
+// }
 
 
-// // number precision
+// == converts type
+// likewise for !=
+// use !==
 
-// price = price - 40;
+// let price = 12;
 
-// showMessage(price++);
+// let message = (price > 10) ? showMessage('yes') : showMessage('no');
 
-// strings
+// for (let index = 0; index < 3; index++) {
+//     console.log(index);    
+// }
 
-//  let message = 'Hello \'world\'!'
+// let i = 5;
+// while(i>0) {
+//     console.log(i);
+//     i--;
+// };
 
-// let name = 'Andrea'
-// 
-// let message = `Hello 
-// 
-// ${name}`;
-// 
-// showMessage(message)
-// 
-// console.log(message );
-// 
-// string manipulation
-// 
-// let message = 'Hello';
-// message = message.toUpperCase();
-// message = message.substring(1);
-// message= message.length;
-// message = '123';
-// console.log(typeof(message));
-// showMessage(message + 2);
+// let countDown = 10;
 
-// let amount = Number.parseFloat("123.12A");
-// amount = amount.toString();
+// do {
+//     countDown === 0 ? console.log("Happy New Year!") :  console.log(countDown);
+//     countDown--;    
+// } while(countDown >= 0) 
 
-// let saved = true;
-// saved = !saved;
+// price = 2.4;
+// if((1.1 + 1.3).toFixed(1) === 2.4) {
+//     showMessage('true');
+// }
+//     else {
+//         showMessage(typeof(+(1.1 + 1.3).toFixed(4)));
+//     }
 
-// let saved = 10;
-// saved = null;
+// let myFunction = function (message) {
+//     console.log(message);
+// }
 
-// showMessage(saved);
-// console.log(saved);
+// myFunction();
 
-let person = {
-    firstName: 'John',
-    lastName: 'Adams'
-};
+function getSecretCode (value) {
+    let code = key * 42;
+    return code;
+}
 
-showMessage(person.firstName);
+let key = 3;
+let secretCode = getSecretCode(2);
+showMessage(secretCode);
+
+changePercentageOff(42);
