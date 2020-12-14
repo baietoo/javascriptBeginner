@@ -147,3 +147,104 @@ we got ifs while do while for loops
         document.getElementById('percentage-off').textContent = percentage + " % OFF";
     }
 ```
+
+## Objects
+
+### object properties
+
+- initialized using {}
+  - ```javascriptlet person = {firstName: "John"};```
+- access properties by:
+  - person.firstName
+  - person['firstName']
+- symbols
+  - let mySymbol = Symbol();
+  - used for secret information
+  - when passing an object symbols can only pe modified if the symbol variable is changed
+
+### object methods
+
+- a function within an object
+- use `this.varName` to refer to variables within said object
+
+```javascript
+    let person = {
+        name = 'John',
+        showName = function(arg) {
+            console.log(this.name + ' ' + arg)
+        }
+    }
+```
+
+- you can also send args to function in an object
+
+### Passing objects to functions
+
+- when passing an object to a function you pass a pointer therefore
+  - you can change properties and the changes will be stored
+
+```javascript
+    let person = {
+        name = 'John',
+        age = 32,
+    }
+
+    function incrementAge(person) {
+        person.age++;
+    }
+
+    incrementAge(person); // will return 33
+```
+
+### Standard Built in objects
+
+- check MDN for these objects
+- str
+  - str.charAt(1)
+- Date
+  - new Date();
+  - Date.toDateString();
+- number
+- Math
+  - .random
+  - .abs(myNumberapple)
+
+### DOM DOM sa-naltzam
+
+- ```javascript document.getElementById('damn-id').textContent = 'new text';```
+
+- access the webpage object
+  - with a method that retrieves an object
+    - and change property of retrieved object with
+
+### Stylin DOM Elements
+
+- you can declare a `const` store de header element in it and change:
+  - color: `header.style.color = '#fff'`
+  - font-weight: `header.style.fontWeight = '800'`
+
+### Event listeners
+
+- detect if a user click on a button
+  - get the button using an id
+  - store it in a variable
+  - using the addEventListener method
+    - specifiy event type 'click'
+    - and an anonymous function
+
+```javascript
+    const button = document.getElementById('btn-id');
+    button.addEventListener('click', function () {
+        console.log('click');
+    });
+
+```
+
+### Showing and hidind DOM elems
+
+- manipulate using classes
+  - bootstrap example: add 'd-none' in the class area
+  - classList.contains('d-none')
+  - remove it by checking the classList method 
+    - classList.remove('d-none')
+    - classList.add('d-none')

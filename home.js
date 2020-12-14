@@ -81,13 +81,71 @@ converts string to Number */
 
 // myFunction();
 
-function getSecretCode (value) {
-    let code = key * 42;
-    return code;
-}
+// function getSecretCode (value) {
+//     let code = key * 42;
+//     return code;
+// }
 
-let key = 3;
-let secretCode = getSecretCode(2);
-showMessage(secretCode);
+// let key = 3;
+// let secretCode = getSecretCode(2);
+// showMessage(secretCode);
 
-changePercentageOff(42);
+// changePercentageOff(42);
+
+// let mySymbol = Symbol();
+
+// let person = {
+//     name: "John",
+//     age: 32,
+//     partTime: false,
+//     showInfo: function(realAge) {
+//         showMessage(this.name + ' is ' + realAge);
+//     }
+// };
+
+// person.showInfo(34);
+
+// let person = {
+//     name : 'John',
+//     age : 32,
+// };
+
+// function incrementAge(person) {
+//     person.age++;
+// };
+
+// incrementAge(person); // will return 33
+// showMessage(person.age);
+
+// let currentDate = new Date();
+// showMessage(currentDate.toDateString());
+// showMessage(Math.random());
+
+// let s = 'Hello';
+// showMessage(s.charAt(1))
+
+// const header = document.getElementById('message');
+
+// // header.style.color = '#FFF';
+// header.style.fontWeight = '800';
+
+// const button = document.getElementById('see-review');
+
+// button.addEventListener('click', function() {
+//     console.log('click');
+// });
+
+const button = document.getElementById('see-review');
+
+button.addEventListener('click', function () {
+    const review = document.getElementById('review');
+    if(review.classList.contains('d-none')) {
+        review.classList.remove('d-none');
+        button.textContent = 'CLOSE REVIEW';
+    }
+    else {
+        review.classList.add('d-none');
+        button.textContent = 'SEE REVIEW';
+
+    }
+})
