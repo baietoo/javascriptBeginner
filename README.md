@@ -237,7 +237,6 @@ we got ifs while do while for loops
     button.addEventListener('click', function () {
         console.log('click');
     });
-
 ```
 
 ### Showing and hidind DOM elems
@@ -248,3 +247,63 @@ we got ifs while do while for loops
   - remove it by checking the classList method 
     - classList.remove('d-none')
     - classList.add('d-none')
+
+## Arrays
+
+### creating and initializing arrays
+
+- typeof(array) won't work, use ```Array.isArray(array)```
+- let values = [1,2,3]
+- let values = Array.of(1,2,3)
+
+### accessing array items
+
+- value[0] = 4
+- value[1] // would print 2
+
+### Manipulating Arrays
+
+- push - adds element at the end of the array
+- pop - removes element from the end of the array
+- shift - removes element from beggining of array
+  - stores the first element of the array if used: shift()
+- unshift - adds element to the beginning of array
+  - stores the last element of the array if used: unshift()
+
+### slice() and splice()
+
+- slice will retrieve a slice from an array
+  - slice(1,2)  will retrieve an array with element array[1]
+  - slice() will retrieve a full copy of the array
+  - splice(1, 0, 'foo') - adds foo at array[1]
+  - splice(1,1) - removes array[1]
+
+
+### array searching and looping
+
+- filter 
+  - returns an Array
+- find
+  - returns the first found value
+- forEach
+  - used to loop over all the items
+
+```javascript
+    // the following applicable to filter and find as well
+    // (new) short version
+    array.forEach( element => {
+        console.log(element);
+    })
+    //long version
+    array.forEach(function(element) {
+        console.log(element);
+    })
+```
+
+### Arrays in DOM
+
+- document.damnboigetElementByClassName('container)
+  - retrieves an array of all the elements that have the class container
+  - the class can be removed easily:
+    - array[0].classList.remove('d-none');
+    - same with add
