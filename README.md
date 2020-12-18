@@ -244,7 +244,7 @@ we got ifs while do while for loops
 - manipulate using classes
   - bootstrap example: add 'd-none' in the class area
   - classList.contains('d-none')
-  - remove it by checking the classList method 
+  - remove it by checking the classList method
     - classList.remove('d-none')
     - classList.add('d-none')
 
@@ -278,10 +278,9 @@ we got ifs while do while for loops
   - splice(1, 0, 'foo') - adds foo at array[1]
   - splice(1,1) - removes array[1]
 
-
 ### array searching and looping
 
-- filter 
+- filter
   - returns an Array
 - find
   - returns the first found value
@@ -307,3 +306,57 @@ we got ifs while do while for loops
   - the class can be removed easily:
     - array[0].classList.remove('d-none');
     - same with add
+
+## Scope and hoisting
+
+### Global Scope
+
+- best practice use a single object to store all the global variables
+
+```javascript
+    const globals = {
+        price: 301,
+        productName: 'Stela Artois'
+    }
+    globals.price;
+```
+
+### Function Scope
+
+- works like any other programming language
+- the example below will print '12345'
+- showName() no productId go to outer scope
+  - scoping() no productId go to outer scope
+    - global scope found productId = '12345'
+
+```javascript
+    let productId = '12345';
+    function scoping() {
+        showName() {
+            console.log(productId);
+        }
+    };
+```
+
+### Var and hoisting
+
+- javascript makes 2 passes on the code
+  1. checks for var and functions
+  2. runs top->down
+- hoisting is okay for functions
+- not okay with variables(use const and let instead)
+
+### Undeclared Variables and Strict Mode
+
+- 'use strict' - forces dev to declare variables
+
+```javascript
+    productId = '12345'
+    // will not throw an error
+```
+
+```javascript
+    'use strict'
+    productId = '12345';
+    // undefined error
+```
